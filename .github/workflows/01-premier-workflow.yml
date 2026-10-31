@@ -1,6 +1,5 @@
 name: Premier workflow 
-on: 
-  push:
+on: push
 jobs: 
   dire-bonjour: 
     runs-on: ubuntu-latest 
