@@ -20,7 +20,7 @@ jobs:
 
       - name: Afficher les informations du runner
         run: |
-          echo "OS: ${{ runner.os }}"
+          echo "OS: ${{ env.APP_NAME }}"
           echo "Architecture: ${{ runner.arch }}"
 
       - name: Afficher une variable
