@@ -22,4 +22,7 @@ jobs:
         run: |
           echo "OS: ${{ env.APP_NAME }}"
           echo "Architecture: ${{ runner.arch }}"
-
+      - name: Afficher une variable
+        run: echo "Application: ${{ env.APP_NAME }}"
+      - name: Vérifier le résultat
+        run: echo "Job status: ${{ job.status }}"
