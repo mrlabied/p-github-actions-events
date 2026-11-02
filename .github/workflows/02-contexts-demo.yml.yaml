@@ -19,7 +19,7 @@ jobs:
           echo "Commit: ${{ github.sha }}"
 
       - name: Afficher une variable
-        run: echo "Application: ${{ env.APP_NAME }}"
+        run: echo "OS: ${{ runner.os }}"
 
       - name: Afficher les informations du runner
         run: |
