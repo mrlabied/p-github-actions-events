@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: Vérifier le résultat
-        run: echo "Job status"
+        run: echo "Job status: ${{ job.status }}"
