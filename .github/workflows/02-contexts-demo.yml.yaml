@@ -12,5 +12,8 @@ jobs:
       APP_NAME: MonApplication
 
     steps:
-      - name: Vérifier le résultat
-        run: echo "Job status: ${{ job.status }}"
+      - name: Afficher les informations du dépôt
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
