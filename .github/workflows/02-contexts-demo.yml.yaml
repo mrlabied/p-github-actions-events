@@ -22,6 +22,3 @@ jobs:
         run: |
           echo "OS: ${{ runner.os }}"
           echo "Architecture: ${{ runner.arch }}"
-
-      - name: Afficher une variable
-        run: echo "Application: ${{ env.APP_NAME }}"
