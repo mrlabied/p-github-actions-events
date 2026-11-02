@@ -1,0 +1,30 @@
+name: CI - Contextes GitHub Actions
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_NAME: MonApplication
+
+    steps:
+      - name: Afficher les informations du dépôt
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+
+      - name: Afficher les informations du runner
+        run: |
+          echo "OS: ${{ runner.os }}"
+          echo "Architecture: ${{ runner.arch }}"
+
+      - name: Afficher une variable
+        run: echo "Application: ${{ env.APP_NAME }}"
+
+      - name: Vérifier le résultat
+        run: echo "Job status: ${{ job.status }}"
