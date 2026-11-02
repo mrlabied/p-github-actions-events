@@ -18,13 +18,13 @@ jobs:
           echo "Branch: ${{ github.ref_name }}"
           echo "Commit: ${{ github.sha }}"
 
-      - name: Afficher une variable
-        run: echo "OS: ${{ runner.os }}"
-
       - name: Afficher les informations du runner
         run: |
           echo "OS: ${{ runner.os }}"
           echo "Architecture: ${{ runner.arch }}"
+
+      - name: Afficher une variable
+        run: echo "Application: ${{ env.APP_NAME }}"
 
       - name: Vérifier le résultat
         run: echo "Job status: ${{ job.status }}"
