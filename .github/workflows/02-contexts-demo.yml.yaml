@@ -1,0 +1,16 @@
+name: CI - Contextes GitHub Actions
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_NAME: MonApplication
+
+    steps:
+      - name: Vérifier le résultat
+        run: echo "Job status"
