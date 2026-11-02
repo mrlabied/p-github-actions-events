@@ -1,0 +1,20 @@
+name: custom-run-name
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        options:
+          - dev
+          - staging
+          - prod
+        default: dev
+
+run-name: "Deploy to ${{ inputs.environment }}"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying to ${{ inputs.environment }}"
